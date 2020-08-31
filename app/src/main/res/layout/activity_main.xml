@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroind"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/imagView_navegation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:src="@drawable/ic_align_justify"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_name_of_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="9sp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imagView_navegation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imagView_navegation"
+                    app:layout_constraintTop_toTopOf="@+id/imagView_navegation" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/text_findMay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="9sp"
+                android:text="Find may next home"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <!--        <RelativeLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginTop="10dp"-->
+            <!--            android:background="@color/colorWhite">-->
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/ed_search1"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@drawable/frame_image_view"-->
+            <!--                android:hint="City,Post Code, Street"-->
+            <!--                android:letterSpacing="-0.01"-->
+            <!--                android:lineSpacingExtra="7sp"-->
+            <!--                android:textColor="#9e9e9e"-->
+            <!--                android:textSize="14sp"-->
+            <!--                android:layout_toStartOf="@+id/lyt"-->
+            <!--                android:layout_centerVertical="true"-->
+            <!--                android:layout_marginStart="11dp"-->
+            <!--                android:layout_marginEnd="11dp"-->
+            <!--               />-->
+
+
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/lyt"-->
+            <!--                android:layout_width="55dp"-->
+            <!--                android:layout_height="46dp"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:background="@color/colorDarck"-->
+            <!--                >-->
+            <!--                <ImageView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:src="@drawable/ic_search_"-->
+            <!--                    android:layout_centerInParent="true"/>-->
+
+            <!--            </RelativeLayout>-->
+
+            <!--        </RelativeLayout>-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <EditText
+                    android:id="@+id/ed_search"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/frame_image_view"
+                    android:hint="City,Post Code, Street"
+                    android:letterSpacing="-0.01"
+                    android:lineSpacingExtra="7sp"
+                    android:textColorHint="#9e9e9e"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/imageView_search"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView_search"
+                    android:layout_width="55dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:background="@drawable/frame_image_view_dark"
+                    app:layout_constraintBottom_toBottomOf="@+id/ed_search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ed_search"
+                    app:layout_constraintTop_toTopOf="@+id/ed_search"
+                    app:srcCompat="@drawable/ic_search" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!--        <RelativeLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:background="@color/colorWhite"-->
+            <!--            android:layout_marginTop="20dp">-->
+
+            <!--            <com.facebook.drawee.view.SimpleDraweeView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="177dp"-->
+            <!--                android:layout_margin="15dp"-->
+            <!--               app:placeholderImageScaleType="centerCrop"-->
+            <!--                app:placeholderImage="@drawable/jesse"-->
+            <!--                app:roundedCornerRadius="4dp"/>-->
+
+
+            <!--        </RelativeLayout>-->
+
+            <ImageView
+                android:id="@+id/my_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/frame_image_view"
+                android:cropToPadding="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/jesse" />
+
+
+            <RelativeLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_HottestProperties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:letterSpacing="-0.01"
+                    android:lineSpacingExtra="9sp"
+                    android:text="Hottest Properties"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <Button
+                    android:id="@+id/bn_showall_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="115dp"
+                    android:background="@drawable/backgroind_buuton"
+                    android:text="@string/showAll"
+                    android:textColor="@color/colorText" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_HottestProperties"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_PropertiesforRent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="-0.01"
+                    android:lineSpacingExtra="9sp"
+                    android:text="Properties for Rent"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/bn_showall_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="115dp"
+                    android:background="@drawable/frame_image_view_button"
+                    android:text="@string/showAll"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_PropertiesforRent"
+                android:layout_width="match_parent"
+                android:layout_height="257dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="24dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

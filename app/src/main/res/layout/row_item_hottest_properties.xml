@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="252dp"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_marginStart="7dp"
+    android:layout_marginEnd="7dp"
+    app:cardBackgroundColor="@color/colorWhite">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/my_image_view_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    fresco:roundedCornerRadius="6dp"
+                    fresco:placeholderImage="@drawable/sara"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundBottomRight="true"
+                    fresco:roundBottomLeft="true"
+                    fresco:roundTopStart="true"
+                    fresco:roundTopEnd="true"
+                    fresco:roundTopRight="true"
+                    fresco:roundTopLeft="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+                    />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/my_heart"
+                android:layout_width="21dp"
+                android:layout_height="18.3dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_heart"
+                android:layout_marginEnd="13.5dp"
+                android:layout_marginTop="7dp"
+
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_toStartOf="@+id/my_heart">
+                <TextView
+                    android:id="@+id/tv_name_hottest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="7sp"
+                    android:maxLines="1"
+                    android:text="Kandis Residence"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                                />
+
+                <TextView
+                    android:id="@+id/tv_place_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="8sp"
+                    android:maxLines="1"
+                    android:textColor="@color/colorText"
+                    android:layout_marginTop="2dp"
+                    android:text="2-10 Kandis Link - D27"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_price_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6sp"
+                    android:text="$8,654 PSF"
+                    android:textColor="@color/colorText"
+                    android:textSize="12sp"
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+
+
+<!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:fresco="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="252dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_margin="8dp"-->
+<!--    android:focusable="true"-->
+<!--    app:cardCornerRadius="5dp"-->
+<!--    app:background="@color/colorWhite">-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+
+
+<!--        <com.facebook.drawee.view.SimpleDraweeView-->
+<!--            android:id="@+id/my_image_view_home"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp"-->
+<!--            app:ignore="MissingConstraints"-->
+<!--            app:layout_constraintDimensionRatio="2:2,2:2"-->
+<!--            fresco:roundedCornerRadius="6dp"-->
+<!--            fresco:placeholderImage="@drawable/sara"-->
+<!--            fresco:placeholderImageScaleType="centerCrop"-->
+<!--            fresco:roundBottomRight="true"-->
+<!--            fresco:roundBottomLeft="true"-->
+<!--            fresco:roundTopStart="true"-->
+<!--            fresco:roundTopEnd="true"-->
+<!--            fresco:roundTopRight="true"-->
+<!--            fresco:roundTopLeft="true"-->
+<!--            />-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginTop="5dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_name_hottest"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:ellipsize="end"-->
+<!--                android:lineSpacingExtra="7sp"-->
+<!--                android:maxLines="1"-->
+<!--                android:text="Kandis Residence"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                fresco:layout_constraintTop_toTopOf="parent"-->
+<!--                fresco:layout_constraintStart_toStartOf="parent"-->
+<!--                fresco:layout_constraintEnd_toStartOf="@id/my_heart"-->
+<!--                />-->
+
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/my_heart"-->
+<!--                android:layout_width="21dp"-->
+<!--                android:layout_height="18.3dp"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                android:cropToPadding="false"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/ic_heart"-->
+<!--                fresco:layout_constraintTop_toTopOf="@+id/tv_name_hottest"-->
+<!--                fresco:layout_constraintEnd_toEndOf="parent"-->
+<!--                fresco:layout_constraintBottom_toBottomOf="@id/tv_place_home"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_place_home"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="17dp"-->
+<!--                android:ellipsize="end"-->
+<!--                android:lineSpacingExtra="8sp"-->
+<!--                android:maxLines="1"-->
+<!--                android:textColor="@color/colorText"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:text="2-10 Kandis Link - D27"-->
+<!--                android:textSize="12sp"-->
+<!--                fresco:layout_constraintTop_toBottomOf="@+id/tv_name_hottest"-->
+<!--                fresco:layout_constraintStart_toStartOf="@+id/tv_name_hottest"-->
+<!--                fresco:layout_constraintEnd_toStartOf="@id/my_heart" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_price_home"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="17dp"-->
+<!--                android:lineSpacingExtra="6sp"-->
+<!--                android:text="$8,654 PSF"-->
+<!--                android:textColor="@color/colorText"-->
+<!--                android:textSize="12sp"-->
+<!--                fresco:layout_constraintTop_toBottomOf="@+id/tv_place_home"-->
+<!--                fresco:layout_constraintStart_toStartOf="@+id/tv_name_hottest"/>-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </LinearLayout>-->
+<!--   -->
+<!--</androidx.cardview.widget.CardView>-->
