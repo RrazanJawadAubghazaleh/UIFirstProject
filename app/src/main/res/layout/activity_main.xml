@@ -260,10 +260,10 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView_PropertiesforRent"
                 android:layout_width="match_parent"
-                android:layout_height="257dp"
-                android:layout_marginTop="21dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="24dp"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+                 />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
